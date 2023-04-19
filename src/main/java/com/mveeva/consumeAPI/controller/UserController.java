@@ -16,7 +16,7 @@ public class UserController {
 		RestTemplate restTemplate = new RestTemplate();
 		String uri = "https://jsonplaceholder.typicode.com/users/"+id;
 		User user = restTemplate.getForObject(uri, User.class);
-		System.out.println("User: "+user.id()+" : "+user.email());
+		System.out.println("User: "+user.id()+" : "+user.email()+"  :"+user.name());
 		return "User details page";
 	}
 
